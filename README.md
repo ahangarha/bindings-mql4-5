@@ -1,8 +1,6 @@
 # [hitback.us](https://www.hitback.us/ "Hitback")
 Algorithmic trading and quantitative trading platform to develop trading robots (stock markets, forex, bitcoins and options)
 
-###
-
 This project provide [MQL4](https://www.metatrader4.com/ "Metatrader 4.") and [MQL5](https://www.metatrader5.com/ "Metatrader 5.") bindings for the [ZeroMQ](http://zeromq.org/ "ZeroMQ homepage.") networking library to an external server to create live streaming pipeline with real time data of ticks and order book changes. 
 
 With ZeroMQ (http://zeromq.org/) you can:
@@ -42,42 +40,32 @@ Once the ZMQ receive new ticks or any change on the order book happen, it is aut
 
 
 ## Install ZMQ Ubuntu 16.04
-
+```
 sudo apt-get install libtool pkg-config build-essential autoconf automake
-
 sudo apt-get install libzmq-dev
-
+```
 ### Install libsodium
-
+```
 git clone git://github.com/jedisct1/libsodium.git
-
 cd libsodium
-
 ./autogen.sh
-
 ./configure && make check
-
 sudo make install
-
 sudo ldconfig
+```
 
 ### Install zeromq
 
 ### latest version as of this post is 4.1.2
-
+```
 wget http://download.zeromq.org/zeromq-4.1.2.tar.gz
-
 tar -xvf zeromq-4.1.2.tar.gz
-
 cd zeromq-4.1.2
-
 ./autogen.sh
-
 ./configure && make check
-
 sudo make install
-
 sudo ldconfig
+```
 
 ### Pushing Support
 * PubNub
